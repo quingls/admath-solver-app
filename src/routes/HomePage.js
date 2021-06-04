@@ -61,11 +61,6 @@ function Home(){
                 </Row>
                 
             </Container>
-            <Container className="about">
-            Ariel L. Magpantay Jr.
-            Mariamne Gayle G. Jordan 
-            BS ChE -Batangas State University
-            </Container>
         </div>
     );
 }

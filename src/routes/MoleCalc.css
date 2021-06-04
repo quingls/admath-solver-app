@@ -1,0 +1,48 @@
+.title {
+    text-align: center;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: medium;
+    font-style: italic;
+}
+
+.bg {
+    background-image: url('../assets/admath-solver-bg.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: left;   */
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding: 2%;
+    margin-left: 2.5%;
+    margin-right: 2.5%
+}
+
+.body {
+    background-color: #403c3c;
+    padding: 15px;
+    margin: 15px;
+    align-items: center
+
+}
+
+.input{
+    padding: 10px;
+    align-items: center
+}
+
+
+.button {
+    display: block;
+    align-items: center;
+    width: 95%;
+    margin-right: 3px;
+}
+     
+.result {
+    width: 50%
+}
