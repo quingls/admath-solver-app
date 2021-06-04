@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/quingls/admath-solver-app.git/static/css/main.2222749c.chunk.css",
+    "main.js": "/quingls/admath-solver-app.git/static/js/main.2f2b4ded.chunk.js",
+    "main.js.map": "/quingls/admath-solver-app.git/static/js/main.2f2b4ded.chunk.js.map",
+    "runtime-main.js": "/quingls/admath-solver-app.git/static/js/runtime-main.58cbf265.js",
+    "runtime-main.js.map": "/quingls/admath-solver-app.git/static/js/runtime-main.58cbf265.js.map",
+    "static/js/2.3dbf5df2.chunk.js": "/quingls/admath-solver-app.git/static/js/2.3dbf5df2.chunk.js",
+    "static/js/2.3dbf5df2.chunk.js.map": "/quingls/admath-solver-app.git/static/js/2.3dbf5df2.chunk.js.map",
+    "static/js/3.8fd46bde.chunk.js": "/quingls/admath-solver-app.git/static/js/3.8fd46bde.chunk.js",
+    "static/js/3.8fd46bde.chunk.js.map": "/quingls/admath-solver-app.git/static/js/3.8fd46bde.chunk.js.map",
+    "index.html": "/quingls/admath-solver-app.git/index.html",
+    "static/css/main.2222749c.chunk.css.map": "/quingls/admath-solver-app.git/static/css/main.2222749c.chunk.css.map",
+    "static/js/2.3dbf5df2.chunk.js.LICENSE.txt": "/quingls/admath-solver-app.git/static/js/2.3dbf5df2.chunk.js.LICENSE.txt",
+    "static/media/MachNum.css": "/quingls/admath-solver-app.git/static/media/admath-solver-bg.eb83c6b3.png",
+    "static/media/HomePage.css": "/quingls/admath-solver-app.git/static/media/admath-solver-mainpage-bg.1a9039bc.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.58cbf265.js",
+    "static/js/2.3dbf5df2.chunk.js",
+    "static/css/main.2222749c.chunk.css",
+    "static/js/main.2f2b4ded.chunk.js"
+  ]
+}
