@@ -3,7 +3,7 @@
     background-color: #282c34;
     background-image: url('../assets/admath-solver-mainpage-bg.png');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
   padding: 10px;
   width: 350px;
   margin-top: 10px;;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   height: 50px;
   border: black 1px
 
