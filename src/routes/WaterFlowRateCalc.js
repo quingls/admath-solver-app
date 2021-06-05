@@ -12,7 +12,8 @@ function WaterFlowRate(){
     let [result, setResult] = useState('');
     let [resultUnit, setResultUnit] = useState('m^3/h');
 
-    
+    const dinArr = new Array ("DN6", "DN8", "DN10", "DN15", "DN20", "DN25", "DN32", "DN40", "DN50", "DN65", "DN80", "DN100", "DN125", "DN150", "DN200", "DN250", "DN300", "DN350", "DN400", "DN450") 
+    const jisArr = new Array ("6A", "8A", "10A", "15A", "20A", "25A", "32A", "40A", "50A", "65A", "80A", "100A", "125A", "150A", "200A", "250A", "300A", "350A", "400A", "450A" )
     const piVal = Math.PI;
 
     function getDiameter(pipeGrade, pipeSize){
@@ -58,7 +59,7 @@ function WaterFlowRate(){
             }else if(pipeSize==="450A"){
                 return 441.4;
             }else{
-                setpipeInnerDiameter("UNDEFINE")
+                return "Incorrect combination!"
             }
         }else{
             if(pipeSize==="DN6"){
@@ -102,28 +103,59 @@ function WaterFlowRate(){
             }else if(pipeSize==="DN450"){
                 return 437.2;
             }else{
-                setpipeInnerDiameter("UNDEFINE")
+                return "Incorrect combination!"
             }
         }
+    }
+
+    function inArr(tempArr,tempSize){
+        for (var i=0; i<20; i++){
+            if (tempArr[i]===tempSize) return true
+        }
+        return false
     }
     
     function getWaterFlowRate(){
         let temp1 = pipeGrade;
         let temp2 = pipeSize;
         let temp3 = getDiameter(temp1, temp2)
-        let temp4 = waterVelocity;
+        let temp4 = Number(waterVelocity);
         let tempResult = 0;
         let tempres1 = 0;
 
         setpipeInnerDiameter(temp3);
+        Number(temp3)
         console.log("dia "+temp3)
-
-        tempres1 = 3600 * piVal * temp4
-        console.log(tempres1)
-        tempResult = (tempres1*(((temp3/1000)/2))^2)
-        console.log("res "+tempResult)
-    
-        setResult(tempResult.toFixed(5))
+        console.log("grade "+temp1)
+        if (temp1==="jis"){
+            if (inArr(jisArr, temp2)===true){
+                console.log("pasok")
+                tempres1 = 3600 * Number(piVal) * temp4
+                console.log("tempres1 "+tempres1)
+                tempResult = (tempres1*(((temp3/1000)/2))^2)
+                // console.log("res "+tempResult)
+                setResult(tempResult.toFixed(5))
+            }else{
+                setResult("Incorrect combinations of inputs!")
+            }
+        }else if (temp1==="din"){ 
+            
+            if (inArr(dinArr, temp2)==true){
+                tempres1 = 3600 * piVal * temp4
+                // console.log(tempres1)
+                tempResult = (tempres1*(((temp3/1000)/2))^2)
+                // console.log("res "+tempResult)
+                setResult(tempResult.toFixed(5))
+            }else{
+                setResult("Incorrect combinations of inputs!")
+            }
+        }
+        // tempres1 = 3600 * piVal * temp4
+        // console.log(tempres1)
+        // tempResult = (tempres1*(((temp3/1000)/2))^2)
+        // console.log("res "+tempResult)
+        
+        // setResult(tempResult.toFixed(5))
         // setpipeInnerDiameter('')
     };
 
@@ -140,8 +172,8 @@ function WaterFlowRate(){
                             <label className="input">
                                 Pipe Grade: 
                                 <select onChange={(e) => setpipeGrade(e.target.value)}>
-                                    <option value="jis-sgp">JIS-SGP</option>
-                                    <option value="din 2488">DIN 2488</option>
+                                    <option value="jis">JIS-SGP</option>
+                                    <option value="din">DIN 2488</option>
                                 </select>
                             </label>
                         </form>
@@ -150,6 +182,7 @@ function WaterFlowRate(){
                                 Pipe Size: 
                                 <select onChange={(e) => setpipeSize(e.target.value)}>
                                     <option value="DN6">DN6</option>
+                                    <option value="DN8">DN8</option>
                                     <option value="DN10">DN10</option>
                                     <option value="DN15">DN15</option>
                                     <option value="DN20">DN20</option>
@@ -169,6 +202,7 @@ function WaterFlowRate(){
                                     <option value="DN400">DN400</option>
                                     <option value="DN450">DN450</option>
                                     <option value="6A">6A</option>
+                                    <option value="8A">8A</option>
                                     <option value="10A">10A</option>
                                     <option value="15A">15A</option>
                                     <option value="20A">20A</option>
