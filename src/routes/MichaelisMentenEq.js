@@ -13,12 +13,13 @@ function MichaelisMenten(){
 
 
     function getReactionRate(){
-        let temp1 = michaelisConst;
-        let temp2 = maxReaxSpeed;
-        let temp3 = substrateConc;
+        let temp1 = Number(michaelisConst);
+        let temp2 = Number(maxReaxSpeed);
+        let temp3 = Number(substrateConc);
         let tempResult = 0;
 
-        tempResult=((temp2*temp3)/(temp3+temp1))
+        tempResult=(temp2*temp3)/(temp3+temp1)
+        console.log("ans "+tempResult)
         if(tempResult==null){
             setResult("Incorrect input!")
         }else{

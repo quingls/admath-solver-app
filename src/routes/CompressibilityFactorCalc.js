@@ -18,11 +18,11 @@ function CompressibilityFactor(){
     let [result, setResult] = useState('');
 
     function getCompressibilityFactor(){
-        let temp1 = pressure;
-        let temp2 = volume;
-        let temp3 = molesNum;
-        let temp4 = gasConst;
-        let temp5 = temp;
+        let temp1 = Number(pressure);
+        let temp2 = Number(volume);
+        let temp3 = Number(molesNum);
+        let temp4 = Number(gasConst);
+        let temp5 = Number(temp);
         let tempResult = 0;
 
 

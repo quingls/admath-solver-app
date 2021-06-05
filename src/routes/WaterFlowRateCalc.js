@@ -122,6 +122,7 @@ function WaterFlowRate(){
         let temp4 = Number(waterVelocity);
         let tempResult = 0;
         let tempres1 = 0;
+        let tempres2 = 0;
 
         setpipeInnerDiameter(temp3);
         Number(temp3)
@@ -129,34 +130,28 @@ function WaterFlowRate(){
         console.log("grade "+temp1)
         if (temp1==="jis"){
             if (inArr(jisArr, temp2)===true){
-                console.log("pasok")
                 tempres1 = 3600 * Number(piVal) * temp4
-                console.log("tempres1 "+tempres1)
-                tempResult = (tempres1*(((temp3/1000)/2))^2)
-                // console.log("res "+tempResult)
+                tempres2 = ((temp3/1000)/2)
+                tempResult = (tempres1*((Math.pow(tempres2, 2))))
                 setResult(tempResult.toFixed(5))
             }else{
-                setResult("Incorrect combinations of inputs!")
+                setResult("Incorrect combination of inputs!")
             }
         }else if (temp1==="din"){ 
             
             if (inArr(dinArr, temp2)==true){
-                tempres1 = 3600 * piVal * temp4
-                // console.log(tempres1)
-                tempResult = (tempres1*(((temp3/1000)/2))^2)
+                console.log("pasok")
+                tempres1 = 3600 * Number(piVal) * temp4
+                tempres2 = ((temp3/1000)/2)
+                // console.log("tempres1 "+tempres1)
+                // console.log("tempres2 "+tempres2)
+                tempResult = (tempres1*((Math.pow(tempres2, 2))))
                 // console.log("res "+tempResult)
                 setResult(tempResult.toFixed(5))
             }else{
-                setResult("Incorrect combinations of inputs!")
+                setResult("Incorrect combination of inputs!")
             }
         }
-        // tempres1 = 3600 * piVal * temp4
-        // console.log(tempres1)
-        // tempResult = (tempres1*(((temp3/1000)/2))^2)
-        // console.log("res "+tempResult)
-        
-        // setResult(tempResult.toFixed(5))
-        // setpipeInnerDiameter('')
     };
 
 

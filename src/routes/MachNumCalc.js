@@ -10,15 +10,15 @@ function MachNum(){
     let [sndSpeedUnit, setsndSpeedUnit] = useState('');
 
     function getMach(){
-        let temp1 = objSpeed;
-        let temp2 = sndSpeed;
+        let temp1 = Number(objSpeed);
+        let temp2 = Number(sndSpeed);
         let tempResult = 0;
         console.log(objSpeedUnit)
         console.log(sndSpeedUnit)
 
         if(objSpeedUnit===sndSpeedUnit){
             tempResult = temp1/temp2
-            setResult(tempResult)
+            setResult(tempResult.toFixed(5))
             console.log(tempResult)
         }else{
             if(temp1 === 0){

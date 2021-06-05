@@ -11,8 +11,8 @@ function MoleCalc(){
     let [resultUnit, setresultUnit] = useState("moles");
 
     function getMoles(){
-        let temp1 = mass;
-        let temp2 = moleWeight;
+        let temp1 = Number(mass);
+        let temp2 = Number(moleWeight);
         let tempResult = 0;
 
         if(temp1===0){
